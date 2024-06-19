@@ -110,7 +110,7 @@ function App() {
 
   for (let i = 0; i < moviesArray.length; i++) {
     // Collect JSX elements for movie title
-    moviesJSX.push(<h1 key={i}>{moviesArray[i].title}</h1>);
+    moviesJSX.push(<h1 style={{color: "#61dafb"}} key={i}>{moviesArray[i].title}</h1>);
 
     // Collect JSX elements for awards
     let myCast = moviesArray[i].cast;
@@ -123,10 +123,12 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div  className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {moviesJSX} {/* Render collected JSX elements */}
+        <div style={{border: "2px solid white", padding: "20px", marginBottom: "100px"}}>
+          {moviesJSX} {/* Render collected JSX elements */}
+        </div>
       </header>
     </div>
   );
